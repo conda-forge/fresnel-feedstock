@@ -35,8 +35,15 @@ requirements:
     - pillow
 
 test:
+  requires:
+    - pytest
   imports:
-  - fresnel
+    - fresnel
+  source_files:
+    - test/
+    - setup.cfg
+  commands:
+    - cd test && pytest
 
 about:
   home: https://bitbucket.org/glotzer/{{ name }}
