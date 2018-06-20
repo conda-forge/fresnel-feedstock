@@ -12,7 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
+  # the upstream package does not support windows
   skip: true  # [win]
 
 requirements:
@@ -28,7 +29,7 @@ requirements:
 
   run:
     - python
-    - numpy
+    - {{ pin_compatible('numpy') }}
     - embree >=2.10.0
     - tbb
     - pillow
