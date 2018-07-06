@@ -1,6 +1,6 @@
 {% set name = "fresnel" %}
-{% set version = "0.5.0" %}
-{% set sha256 = "f5fdf02198b32088443627d732e98f0b6793bc98ad0697a37e6d75dfa5b1f663" %}
+{% set version = "0.6.0" %}
+{% set sha256 = "de1b18f87b5bcdd96844c143d6a9cf560df873a9f1f7eae8d6ff2eac5a1d2467" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   # the upstream package does not support windows
   skip: true  # [win]
 
@@ -24,13 +24,13 @@ requirements:
   host:
     - python
     - numpy
-    - embree >=2.10.0
+    - embree3
     - tbb
 
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - embree >=2.10.0
+    - embree3
     - tbb
     - pillow
 
