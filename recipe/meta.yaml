@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1000
   # the upstream package does not support windows
   skip: true  # [win]
 
@@ -26,6 +26,7 @@ requirements:
     - numpy
     - embree3
     - tbb
+    - tbb-devel
 
   run:
     - python
