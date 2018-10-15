@@ -26,6 +26,7 @@ requirements:
     - numpy
     - embree3
     - tbb
+    - tbb-dev
 
   run:
     - python
