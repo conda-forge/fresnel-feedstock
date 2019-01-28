@@ -5,7 +5,7 @@
 About fresnel
 =============
 
-Home: https://bitbucket.org/glotzer/fresnel
+Home: https://github.com/glotzerlab/fresnel
 
 Package license: BSD-3-Clause
 
@@ -115,5 +115,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bdice](https://github.com/bdice/)
 * [@joaander](https://github.com/joaander/)
 

@@ -47,7 +47,7 @@ test:
     - cd test && pytest
 
 about:
-  home: https://bitbucket.org/glotzer/{{ name }}
+  home: https://github.com/glotzerlab/{{ name }}
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
@@ -55,9 +55,10 @@ about:
 
   description: |
     Fresnel is a python library that path traces publication quality images of soft matter simulations in real time.
-  doc_url: https://bitbucket.org/glotzer/{{ name }}
-  dev_url: https://bitbucket.org/glotzer/{{ name }}
+  doc_url: https://{{ name }}.readthedocs.io
+  dev_url: https://github.com/glotzerlab/{{ name }}
 
 extra:
   recipe-maintainers:
     - joaander
+    - bdice
