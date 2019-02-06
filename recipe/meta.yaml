@@ -1,6 +1,6 @@
 {% set name = "fresnel" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "de1b18f87b5bcdd96844c143d6a9cf560df873a9f1f7eae8d6ff2eac5a1d2467" %}
+{% set version = "0.7.0" %}
+{% set sha256 = "55c93b1272c25af760a3cab7ab0cbb1f4afb33b263dbf76b489aa5d7c7b7b32d" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
+  number: 0
   # the upstream package does not support windows
   skip: true  # [win]
 
