@@ -27,6 +27,8 @@ requirements:
     - embree3
     - tbb
     - tbb-devel
+    - pybind11
+    - qhull
 
   run:
     - python
@@ -34,6 +36,7 @@ requirements:
     - embree3
     - tbb
     - pillow
+    - qhull
 
 test:
   requires:
