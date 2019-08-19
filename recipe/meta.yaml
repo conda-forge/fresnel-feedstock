@@ -1,6 +1,6 @@
 {% set name = "fresnel" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "8f3d49bbb0c8410772f9d5a997b77b9546d512b8fba01ce5604dbf2b1499dd4e" %}
+{% set version = "0.10.0" %}
+{% set sha256 = "98a6555b4423cd8184a5f6120ee7d5bbb5bd0d5ca70b5f476eb0f12034f4882a" %}
 
 package:
   name: {{ name }}
@@ -13,8 +13,9 @@ source:
 
 build:
   number: 0
-  # the upstream package does not support windows
+  # the upstream package does not support windows or python2.7
   skip: true  # [win]
+  skip: true  # [py27]
 
 requirements:
   build:
@@ -27,6 +28,8 @@ requirements:
     - embree3
     - tbb
     - tbb-devel
+    - pybind11
+    - qhull
 
   run:
     - python
@@ -34,6 +37,7 @@ requirements:
     - embree3
     - tbb
     - pillow
+    - qhull
 
 test:
   requires:
