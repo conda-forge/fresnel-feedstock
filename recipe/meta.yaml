@@ -1,6 +1,6 @@
 {% set name = "fresnel" %}
-{% set version = "0.10.1" %}
-{% set sha256 = "2ba1f85f3599f349a7a20d5dcc19a84ea43bb8dd707cad22bbf9f4767ca4b955" %}
+{% set version = "0.11.0" %}
+{% set sha256 = "e0c6568ea461b00ca720eef3376a0cbe61ffeb3f1ccf63c86a0565591680a733" %}
 
 package:
   name: {{ name }}
