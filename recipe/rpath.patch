@@ -1,40 +1,15 @@
 diff --git a/fresnel/CMakeLists.txt b/fresnel/CMakeLists.txt
-index d4a570f..21f4173 100644
+index d4a570f..e2b3268 100644
 --- a/fresnel/CMakeLists.txt
 +++ b/fresnel/CMakeLists.txt
-@@ -18,6 +18,11 @@ endif()
+@@ -18,6 +18,10 @@ endif()
  
  pybind11_add_module(_common ${_common_sources})
  target_link_libraries(_common PRIVATE QHull::qhull_r QHull::qhull_cpp)
 +if(APPLE)
-+    set_target_properties(_common PROPERTIES INSTALL_RPATH "@loader_path")
-+else()
-+    set_target_properties(_common PROPERTIES INSTALL_RPATH "\$ORIGIN")
++    add_custom_command(TARGET _common POST_BUILD
++                       COMMAND install_name_tool ARGS -change lib/libqhull_r.8.0.dylib @rpath/libqhull_r.8.0.dylib $<TARGET_FILE:_common>)
 +endif()
  install(TARGETS _common LIBRARY DESTINATION ${PYTHON_SITE_INSTALL_DIR})
  
  # _cpu
-@@ -43,6 +48,11 @@ set(_cpu_sources
- 
- pybind11_add_module(_cpu "${_cpu_sources}")
- target_link_libraries(_cpu PRIVATE EMBREE::embree)
-+if(APPLE)
-+    set_target_properties(_cpu PROPERTIES INSTALL_RPATH "@loader_path")
-+else()
-+    set_target_properties(_cpu PROPERTIES INSTALL_RPATH "\$ORIGIN")
-+endif()
- install(TARGETS _cpu LIBRARY DESTINATION ${PYTHON_SITE_INSTALL_DIR})
- 
- endif()
-@@ -114,6 +124,11 @@ set(_gpu_sources
- 
- pybind11_add_module(_gpu "${_gpu_sources}")
- target_link_libraries(_gpu PRIVATE ${optix_LIBRARY})
-+if(APPLE)
-+    set_target_properties(_gpu PROPERTIES INSTALL_RPATH "@loader_path")
-+else()
-+    set_target_properties(_gpu PROPERTIES INSTALL_RPATH "\$ORIGIN")
-+endif()
- install(TARGETS _gpu LIBRARY DESTINATION ${PYTHON_SITE_INSTALL_DIR})
- endif()
- 
