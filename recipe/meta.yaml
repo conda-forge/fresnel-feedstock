@@ -16,8 +16,7 @@ source:
 build:
   number: 3
   # the upstream package does not support windows or python2.7
-  skip: true  # [win]
-  skip: true  # [py27]
+  skip: true  # [win or py<36]
 
 requirements:
   build:
