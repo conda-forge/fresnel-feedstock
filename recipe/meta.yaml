@@ -10,12 +10,13 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/glotzerlab/{{ name }}/releases/download/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - rpath.patch
 
 build:
-  number: 2
+  number: 3
   # the upstream package does not support windows or python2.7
-  skip: true  # [win]
-  skip: true  # [py27]
+  skip: true  # [win or py<36]
 
 requirements:
   build:
@@ -29,7 +30,7 @@ requirements:
     - tbb
     - tbb-devel
     - pybind11
-    - qhull
+    - qhull ==2020.2
 
   run:
     - python
@@ -37,7 +38,7 @@ requirements:
     - embree3
     - tbb
     - pillow
-    - qhull
+    - qhull ==2020.2
 
 test:
   requires:
