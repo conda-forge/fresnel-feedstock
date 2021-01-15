@@ -9,9 +9,3 @@ cmake ../ \
       -DENABLE_OPTIX=off
 
 make install
-
-echo "*********"
-echo "otool output"
-otool -L ${PREFIX}/lib/python*/site-packages/fresnel/_common*.so
-echo "*********"
-
