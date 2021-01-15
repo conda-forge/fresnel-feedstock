@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   # the upstream package does not support windows or python2.7
   skip: true  # [win]
   skip: true  # [py27]
@@ -29,7 +29,7 @@ requirements:
     - tbb
     - tbb-devel
     - pybind11
-    - qhull
+    - qhull ==2020.2
 
   run:
     - python
@@ -37,7 +37,7 @@ requirements:
     - embree3
     - tbb
     - pillow
-    - qhull
+    - qhull ==2020.2
 
 test:
   requires:
