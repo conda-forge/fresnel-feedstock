@@ -14,7 +14,7 @@ source:
     - rpath.patch
 
 build:
-  number: 3
+  number: 4
   # the upstream package does not support windows or python2.7
   skip: true  # [win or py<36]
 
