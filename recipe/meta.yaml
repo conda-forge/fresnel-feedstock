@@ -46,10 +46,10 @@ test:
   imports:
     - fresnel
   source_files:
-    - test/
     - setup.cfg
   commands:
-    - cd test && pytest
+    - cd /
+    - pytest --pyargs fresnel -v -ra
 
 about:
   home: https://github.com/glotzerlab/{{ name }}
