@@ -1,6 +1,6 @@
 {% set name = "fresnel" %}
-{% set version = "0.12.0" %}
-{% set sha256 = "cd7bf0bd9d0739606c5c3ac20f7e1637d30177cc3fc774acbb045cc03f95e64b" %}
+{% set version = "0.13.0" %}
+{% set sha256 = "890b66da391e8c1bbc2c9815f63201ac9642ded133732a1395a88029f86c93c5" %}
 
 package:
   name: {{ name }}
@@ -14,7 +14,7 @@ source:
     - rpath.patch
 
 build:
-  number: 4
+  number: 0
   # the upstream package does not support windows or python2.7
   skip: true  # [win or py<36]
 
@@ -46,17 +46,17 @@ test:
   imports:
     - fresnel
   source_files:
-    - test/
     - setup.cfg
   commands:
-    - cd test && pytest
+    - cd /
+    - pytest --pyargs fresnel -v -ra
 
 about:
   home: https://github.com/glotzerlab/{{ name }}
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Path tracing for soft matter simulations.'
+  summary: Path tracing for soft matter simulations.
 
   description: |
     Fresnel is a python library that path traces publication quality images of soft matter simulations in real time.
