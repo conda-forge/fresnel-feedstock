@@ -13,8 +13,6 @@ source:
 
 build:
   number: 0
-  # embree requires visual studio 13+
-  skip: true  # [win and vc<13]
 
 requirements:
   build:
