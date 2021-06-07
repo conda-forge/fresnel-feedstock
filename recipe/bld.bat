@@ -5,7 +5,7 @@ set "CMAKE_PATH_PREFIX=%PREFIX%"
 :: Configure
 cmake ../ ^
       -B build ^
-      -S .
+      -S . ^
       -G "Ninja" ^
       -DENABLE_EMBREE=on ^
       -DENABLE_OPTIX=off

@@ -7,4 +7,5 @@ cmake ${CMAKE_ARGS} ../ \
       -S . \
       -G Ninja
 
+cmake --build build
 cmake --install build
