@@ -6,14 +6,14 @@ set "CMAKE_PATH_PREFIX=%PREFIX%"
 cmake ../ ^
       -B build ^
       -S .
-      -G "NMake Makefiles" ^
+      -G "Ninja" ^
       -DENABLE_EMBREE=on ^
       -DENABLE_OPTIX=off
 if errorlevel 1 exit 1
 
 :: Compile
-nmake
+cmake --build build
 if errorlevel 1 exit 1
 
-nmake install
+cmake --install build
 if errorlevel 1 exit 1
