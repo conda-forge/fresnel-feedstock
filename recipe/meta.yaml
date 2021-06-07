@@ -1,6 +1,6 @@
 {% set name = "fresnel" %}
-{% set version = "0.13.2" %}
-{% set sha256 = "4e213e62fd48a4f8e12d048f952fea5cbca1453cf6a941a34797fcc73ada95e6" %}
+{% set version = "0.13.3" %}
+{% set sha256 = "f8f342fe8b9b8067171dc93a792e4f7d81c559e31d4e5dcb174e214c68e777d8" %}
 
 package:
   name: {{ name }}
@@ -13,8 +13,6 @@ source:
 
 build:
   number: 0
-  # the upstream package does not support windows or python2.7
-  skip: true  # [win or py<36]
 
 requirements:
   build:
@@ -24,6 +22,7 @@ requirements:
     - pybind11                               # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - cmake
+    - ninja
 
   host:
     - python
