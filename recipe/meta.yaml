@@ -1,17 +1,15 @@
 {% set name = "fresnel" %}
-{% set version = "0.13.2" %}
-{% set sha256 = "4e213e62fd48a4f8e12d048f952fea5cbca1453cf6a941a34797fcc73ada95e6" %}
+{% set version = "0.13.3" %}
+{% set sha256 = "f8f342fe8b9b8067171dc93a792e4f7d81c559e31d4e5dcb174e214c68e777d8" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  # fn: {{ name }}-{{ version }}.tar.gz
-  # url: https://github.com/glotzerlab/{{ name }}/releases/download/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
-  # sha256: {{ sha256 }}
-  git_url: https://github.com/glotzerlab/fresnel
-  git_rev: master
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/glotzerlab/{{ name }}/releases/download/v{{ version }}/{{ name }}-v{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
