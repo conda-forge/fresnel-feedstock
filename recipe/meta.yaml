@@ -1,6 +1,6 @@
 {% set name = "fresnel" %}
-{% set version = "0.13.4" %}
-{% set sha256 = "ec67e23992cd4cd2751065bdbffc13f24929c5277122430c39cef04b48938d59" %}
+{% set version = "0.13.5" %}
+{% set sha256 = "b3d30e55fc08b540b18d7f42673e431ff73737273fcd1be3a81b461e65341425" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -27,7 +27,7 @@ requirements:
   host:
     - python
     - numpy
-    - embree3
+    - embree >=4.0.0
     - tbb
     - tbb-devel
     - pybind11
@@ -36,7 +36,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - embree3
+    - embree >=4.0.0
     - tbb
     - pillow
     - qhull ==2020.2
