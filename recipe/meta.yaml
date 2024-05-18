@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -21,6 +21,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cmake
     - ninja
 
@@ -35,7 +36,6 @@ requirements:
 
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - embree >=4.0.0
     - tbb
     - pillow
