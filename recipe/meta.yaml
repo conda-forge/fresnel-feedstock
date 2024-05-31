@@ -47,8 +47,6 @@ test:
     - pytest
   imports:
     - fresnel
-  source_files:
-    - setup.cfg
   commands:
     - cd /
     - pytest --pyargs fresnel -v -ra
