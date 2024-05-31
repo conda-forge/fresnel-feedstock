@@ -1,6 +1,6 @@
 {% set name = "fresnel" %}
 {% set version = "0.13.6" %}
-{% set sha256 = "fd2dee34da93380fbe851c12de59264d43d385447f185fde613be59d8d4fc1a5" %}
+{% set sha256 = "c96ca795171be5c4ce5f9717e409db3f3b1c136f53d2efedf04df5d108dbb1e7" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/glotzerlab/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/glotzerlab/{{ name }}/releases/download/v{{ version }}/{{ name }}-v{{ version }}.tar.xz
   sha256: {{ sha256 }}
 
 build:
