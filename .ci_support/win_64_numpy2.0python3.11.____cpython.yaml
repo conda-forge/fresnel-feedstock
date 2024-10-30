@@ -23,4 +23,3 @@ tbb_devel:
 zip_keys:
 - - python
   - numpy
-  - channel_sources
