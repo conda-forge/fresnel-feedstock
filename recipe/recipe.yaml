@@ -13,7 +13,7 @@ source:
   sha256: 13efa3a967f0fd72d5f686af8563c1c26e6ee2fb00cf94804a9c50b51e9de67f
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -46,7 +46,7 @@ requirements:
 
 tests:
   - script:
-    - pytest --pyargs fresnel -v -ra
+      - pytest --pyargs fresnel -v -ra
     requirements:
       run:
         - pytest
