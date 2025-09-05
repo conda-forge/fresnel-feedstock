@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: "fresnel"
-  version = "0.13.8"
+  version: "0.13.8"
 
 package:
   name: ${{ name }}
@@ -44,7 +44,7 @@ requirements:
     - pillow
     - qhull ==2020.2
 
-test:
+tests:
   - script:
     - pytest --pyargs fresnel -v -ra
     requirements:
