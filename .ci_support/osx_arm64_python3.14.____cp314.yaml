@@ -27,6 +27,6 @@ python:
 target_platform:
 - osx-arm64
 tbb:
-- '2022'
+- '2023'
 tbb_devel:
-- '2022'
+- '2023'
